@@ -25,6 +25,7 @@ def sqrt(x):
         return "Ошибка: отрицательное число!"
 
 def main():
+  try:
     print("Выберите операцию:")
     print("1. Сложение")
     print("2. Вычитание")
@@ -54,6 +55,8 @@ def main():
         print(f"√{num} = {sqrt(num)}")
     else:
         print("Неверный выбор операции!")
+  except ValueError:
+    print("Ошибка: введено не число!")
 
 if __name__ == "__main__":
     main()
